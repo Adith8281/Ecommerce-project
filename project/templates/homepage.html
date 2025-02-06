@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - AK-47</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+     
+        .hero-section {
+            background: url('image/shop-t-shirt-clothes-t-shirts.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(118, 47, 47);
+            position: relative;
+        }
+
+       
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+       
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+       
+        .btn-shop {
+            background-color: orange;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .btn-shop:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="fw-bold display-3">AK-47 T-Shirt Shop</h1>
+            <a href="shop.html" class="btn btn-shop btn-lg mt-3">Shop Now</a>
+        </div>
+    </section>
+
+</body>
+</html>

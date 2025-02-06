@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK-47 - SHOP</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+               
+                .navbar {
+                    background-color: black;
+                }
+        
+                .navbar-brand, .nav-link {
+                    color: #ffffff !important;
+                }
+        
+                .navbar-nav {
+                    margin-left: auto;
+                }
+        
+                .nav-item {
+                    margin-left: 20px;
+                }
+        
+               
+                .nav-link:hover {
+                    color: blue !important;
+                }
+        
+               
+                @media (max-width: 767px) {
+                    .navbar-nav {
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 10px;
+                        display: none;
+                    }
+        
+                    .navbar-toggler {
+                        display: block;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                    }
+        
+                    .navbar-toggler-icon {
+                        background-color: white;
+                        display: block;
+                        width: 30px;
+                        height: 3px;
+                        position: relative;
+                    }
+        
+                    .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 30px;
+                        height: 3px;
+                        background-color: white;
+                    }
+        
+                    .navbar-toggler-icon::before {
+                        top: -8px;
+                    }
+        
+                    .navbar-toggler-icon::after {
+                        top: 8px;
+                    }
+        
+                    .navbar-nav.show {
+                        display: block;
+                    }
+        
+                    .nav-item {
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+      
+        .hero-section {
+            background: url('image/shop-t-shirt-clothes-t-shirts.jpg') no-repeat center center;
+            background-size: cover;
+            color: black;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        .custom-orange-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+        }
+        .custom-orange-btn:hover {
+            background-color: #e68900;
+        }
+        
+
+        .product-card {
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffffff;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            color: #f8f9fa;
+        }
+       
+     
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">AK-47</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+   
+    <section class="hero-section">
+        <div class="container2">
+            <h1>Welcome to AK-47 Shop</h1>
+            <p>Your favorite T-shirt designs, just a click away!</p>
+            <a href="#" class="btn btn-lg custom-orange-btn">Shop Now</a>
+
+        </div>
+    </section>
+
+  
+    <section class="featured-products py-5">
+        <div class="container3">
+            <h2 class="text-center mb-5">All  Products</h2>
+            <div class="row">
+              
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/1-t-shrt.jpg" height="320px" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 1</h5>
+                            <p class="card-text">$599</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/2-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 2</h5>
+                            <p class="card-text">$499</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/3-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 3</h5>
+                            <p class="card-text">$400</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/4-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 4</h5>
+                            <p class="card-text">$300</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/5-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 5</h5>
+                            <p class="card-text">$399</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/6-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 6</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/8.webp" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 7</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/7-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 8</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/9.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 9</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/10.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 10</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/11.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 11</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/12.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 12</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/13.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 13</h5>
+                            <p class="card-text">$400</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/14.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 14</h5>
+                            <p class="card-text">$650</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/15.png" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 15</h5>
+                            <p class="card-text">$560</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/15.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 16</h5>
+                            <p class="card-text">$599</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/16.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 17</h5>
+                            <p class="card-text">$490</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/17.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 18</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/18.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 19</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/19.avif" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 20</h5>
+                            <p class="card-text">$550</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/20.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 21</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/21.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 22</h5>
+                            <p class="card-text">$600</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/22.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 23</h5>
+                            <p class="card-text">$400</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/23.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 24</h5>
+                            <p class="card-text">$480</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/24.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 25</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/25.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 25</h5>
+                            <p class="card-text">$450</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/26.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 26</h5>
+                            <p class="card-text">$502</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/27.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 27</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/28.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 28</h5>
+                            <p class="card-text">$602</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/29.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 29</h5>
+                            <p class="card-text">$409</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/30.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 30</h5>
+                            <p class="card-text">$400</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="image/31.png" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 31</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card product-card">2
+                        <img src="image/32.jpg" height="320px" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">T-Shirt Design 3</h5>
+                            <p class="card-text">$500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container4">
+            <p>&copy; 2025 T-Shirt Shop. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
