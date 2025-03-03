@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url("../static/image/shop.jpg");
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../image/shop.jpg");
+}
 .login-wrapper {
     display: flex;
     align-items: center;
@@ -56,6 +47,8 @@ input {
     color: white;
     outline: none;
 }
+
+
 input::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -75,6 +68,7 @@ button {
 button:hover {
     background: #e33e50;
 }
+
 p {
     margin-top: 15px;
     font-size: 14px;
@@ -88,22 +82,5 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration:underline;
 }
-
-</style>
-</head>
-<body>
-    <div class="login-wrapper">
-        <div class="login-container">
-            <h2>Login</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Login</button>
-            </form>
-            <p>Don't have an account? <a href="{% url 'register' %}">Register here.</a></p>
-        </div>
-    </div>
-</body>
-</html>

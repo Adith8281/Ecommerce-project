@@ -3,184 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #765eff, #ff8c00, #ff5e62, #98d36e, #e7f84f, #50cbf8, #eb4343);
-    color: #333;
-    margin: 0;
-    padding: 0;
-    animation: fadeIn 1.5s ease-in-out;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(1.02);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+    <title>AK-47 - SHOP</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background: linear-gradient(45deg, #ff8c00, #ff5e62);
+                }
+        
+                .navbar-brand, .nav-link {
+                    color:black !important;
+                }
+        
+                .navbar-nav {
+                    margin-left: auto;
+                }
+        
+                .nav-item {
+                    margin-left: 20px;
+                }
+        
+               
+                .nav-link:hover {
+                    color: blue !important;
+                }
+        
+               
+                @media (max-width: 767px) {
+                    .navbar-nav {
+                        text-align: center;
+                        width: 100%;
+                        margin-top: 10px;
+                        display: none;
+                    }
+        
+                    .navbar-toggler {
+                        display: block;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                    }
+        
+                    .navbar-toggler-icon {
+                        background-color: white;
+                        display: block;
+                        width: 30px;
+                        height: 3px;
+                        position: relative;
+                    }
+        
+                    .navbar-toggler-icon::before, .navbar-toggler-icon::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 30px;
+                        height: 3px;
+                        background-color: white;
+                    }
+        
+                    .navbar-toggler-icon::before {
+                        top: -8px;
+                    }
+        
+                    .navbar-toggler-icon::after {
+                        top: 8px;
+                    }
+        
+                    .navbar-nav.show {
+                        display: block;
+                    }
+        
+                    .nav-item {
+                        margin-left: 0;
+                        margin-top: 10px;
+                    }
+                }
+                .hero-section {
+                    background: url('../static/image/shop.jpg') no-repeat center center;
+                    background-size: cover;
+                    position: relative;
+                    text-align: center;
+                    padding: 150px 20px;
+                }
+                
+                .hero-section h1, 
+                .hero-section p {
+                    color: #ff5e62;
+                    position: relative;
+                    z-index: 2;
+                }
+                
+                .hero-section h1 {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                }
+                
+                .hero-section p {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                .custom-orange-btn {
+                    background: linear-gradient(45deg, #ff8c00, #ff5e62);
+                    color: white;
+                    border: none;
+                    padding: 12px 30px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border-radius: 30px;
+                    transition: all 0.4s ease-in-out;
+                    box-shadow: 0px 4px 10px rgba(255, 94, 98, 0.3);
+                    position: relative;
+                    z-index: 2;
+                }
+                
+                .custom-orange-btn:hover {
+                    background: linear-gradient(45deg, #ff5e62, #ff8c00);
+                    transform: translateY(-3px);
+                    box-shadow: 0px 6px 15px rgba(255, 94, 98, 0.5);
+                }
+                @media (max-width: 768px) {
+                    .hero-section {
+                        padding: 100px 20px;
+                    }
+                
+                    .hero-section h1 {
+                        font-size: 2.5rem;
+                    }
+                
+                    .hero-section p {
+                        font-size: 1.2rem;
+                    }
+                
+                    .custom-orange-btn {
+                        font-size: 1rem;
+                        padding: 10px 25px;
+                    }
+                }
+                
+        
 
-.container3 {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+        .product-card {
+            margin-bottom: 30px;
+        }
 
-.featured-products h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #222;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 40px;
-    animation: fadeIn 1.2s ease-in-out;
-}
-.product-card {
-    margin-bottom: 50px;
-    width: 320px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    opacity: 0;
-    animation: slideUp 1s ease-in-out forwards;
-}
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-.product-card:nth-child(1) { animation-delay: 0.2s; }
-.product-card:nth-child(2) { animation-delay: 0.4s; }
-.product-card:nth-child(3) { animation-delay: 0.6s; }
-.product-card:nth-child(4) { animation-delay: 0.8s; }
+        .featured-products {
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+            padding: 60px 0;
+        }
+        
+        .container3 {
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .featured-products h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: white;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .product-card img {
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .product-card .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .product-card h5 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .product-card p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff5e62; 
+        }
+        .product-card .btn-primary {
+            background: linear-gradient(45deg, #ff8c00, #ff5e62);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.4s ease-in-out;
+            text-transform: uppercase;
+        }
+        .product-card .btn-primary:hover {
+            background: linear-gradient(45deg, #ff5e62, #ff8c00);
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(255, 94, 98, 0.4);
+        }
+        @media (max-width: 768px) {
+            .featured-products h2 {
+                font-size: 2rem;
+            }
+        }
+        
+       
+       
+    .footer {
+        background: linear-gradient(45deg, #ff5e62, #ff8c00); 
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        }
 
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
+        .footer a {
+            color: #ffffff;
+        }
 
-.product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.product-card:hover img {
-    transform: scale(1.05);
-}
-
-.product-card .card-body {
-    text-align: center;
-    padding: 20px;
-}
-
-.product-card h5 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ff5e62;
-    margin-bottom: 15px;
-}
-
-.btn-primary {
-    background: linear-gradient(45deg, #ff8c00, #ff5e62);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 30px;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(45deg, #ff5e62, #ff8c00);
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(255, 94, 98, 0.5);
-}
-
-.btn-primary::after {
-    content: "";
-    position: absolute;
-    width: 300%;
-    height: 300%;
-    top: 50%;
-    left: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transition: all 0.4s ease-in-out;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 50%;
-}
-
-.btn-primary:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-}
-
-@media (max-width: 768px) {
-    .container3 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .featured-products h2 {
-        font-size: 2rem;
-    }
-
-    .product-card {
-        width: 280px;
-    }
-
-    .btn-primary {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-.row{
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-    gap: 20px;
-}
-
-
-
- </style>
+        .footer a:hover {
+            text-decoration: none;
+            color: #f8f9fa;
+        }
+       
+     
+    </style>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">╾━╤Ak⁴⁷デ╦︻</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="{% url 'home' %}">𝐇𝐎𝐌𝐄</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'shop' %}">𝐒𝐇𝐎𝐏</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'about' %}">𝐀𝐁𝐎𝐔𝐓 𝐔𝐒
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'contact' %}">𝐂𝐎𝐍𝐓𝐀𝐂𝐓
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'cart' %}">𝐂𝐀𝐑𝐓</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'login' %}">𝐋𝐎𝐆𝐈𝐍</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
+   
+    <section class="hero-section">
+        <div class="container2">
+            <h1>Welcome to AK-47 Shop</h1>
+            <p>Your favorite T-shirt designs, just a click away!</p>
+            <a href="#" class="btn btn-lg custom-orange-btn">Shop Now</a>
+
+        </div>
+    </section>
+
+  
     <section class="featured-products py-5">
         <div class="container3">
             <h2 class="text-center mb-5">╾━╤Ak⁴⁷デ╦︻ 𝓐𝓛𝓛 𝓟𝓡𝓞𝓓𝓤𝓒𝓣𝓢</h2>
@@ -197,7 +308,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
               
                 <div class="col-md-4">
                     <div class="card product-card">
@@ -209,7 +320,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                
                 <div class="col-md-4">
                     <div class="card product-card">
@@ -221,7 +332,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/4-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -232,8 +343,8 @@ body {
                         </div>
                     </div>
                 </div>
-    
-    
+
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/5-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -244,8 +355,8 @@ body {
                         </div>
                     </div>
                 </div>
-    
-    
+
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/6-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -256,9 +367,9 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/8.webp" height="320px" class="card-img-top" alt="Product 3">
@@ -269,9 +380,9 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/7-t-shirt.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -282,9 +393,9 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/9.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -295,7 +406,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/10.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -306,7 +417,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/11.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -317,7 +428,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/12.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -328,8 +439,8 @@ body {
                         </div>
                     </div>
                 </div>
-    
-    
+
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/13.jpg" height="320px"class="card-img-top" alt="Product 3">
@@ -340,7 +451,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/14.jpg" height="320px" class="card-img-top"alt="Product 3">
@@ -351,7 +462,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/15.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -362,7 +473,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/15.png" height="320px" class="card-img-top" alt="Product 3">
@@ -373,7 +484,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/16.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -384,7 +495,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/17.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -395,7 +506,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/18.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -406,7 +517,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/19.avif" height="320px" class="card-img-top" alt="Product 3">
@@ -417,7 +528,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/20.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -428,7 +539,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/21.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -439,7 +550,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/22.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -450,7 +561,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/23.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -461,7 +572,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/24.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -472,7 +583,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/25.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -483,7 +594,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/26.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -494,7 +605,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/27.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -505,7 +616,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/28.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -516,7 +627,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/29.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -527,7 +638,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/30.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -538,7 +649,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/31.png" height="320px" class="card-img-top" alt="Product 3">
@@ -549,7 +660,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/32.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -560,7 +671,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/33.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -571,7 +682,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/34.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -582,7 +693,7 @@ body {
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="card product-card">
                         <img src="../static/image/35.jpg" height="320px" class="card-img-top" alt="Product 3">
@@ -596,6 +707,14 @@ body {
             </div>
         </div>
     </section>
-    
+
+
+    <footer class="footer">
+        <div class="container4">
+            <p>&copy; 2025 T-Shirt Shop. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
